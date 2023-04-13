@@ -1,5 +1,3 @@
-const { default: gradeToLetter } = require('./gradeToLetter.js');
-
 module.exports = {
   packageManager: 'npm',
   reporters: ['html', 'clear-text', 'progress'],

@@ -6,7 +6,7 @@ module.exports= function bmi(w_lbs,h_foot,h_inches) {
     const h_meter = ((h_foot*12 + h_inches) * 2.54) / 100
    // console.log(`you are ${h_meter.toFixed(2)} meters, and ${w_kg.toFixed(2)} kg`)
    // convert h from f
-   if(w_kg<0){
+   if(w_kg<0){ // infeasible decision point
            return -2
       }
     return parseFloat((w_kg/(h_meter*h_meter)).toFixed(2));
@@ -15,6 +15,4 @@ module.exports= function bmi(w_lbs,h_foot,h_inches) {
    // console.log("Input not correct!")
     return -1
   }
-
-  
 }
