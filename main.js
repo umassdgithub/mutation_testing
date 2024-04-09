@@ -7,4 +7,4 @@ const heightInInches = 9;
 
 const result = calculateBMI(weightInPounds, heightInFeet, heightInInches);
 console.log("BMI:", result);
-console.log("BMI:",    calculateBMI(-150, 5, 9))
+console.log("BMI:",    calculateBMI(0, 0, 0))
