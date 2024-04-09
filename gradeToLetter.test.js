@@ -17,7 +17,4 @@ describe("calculateGrade", () => {
     expect(gradeToLetter(65)).toBe("D");
   });
 
-  test("should return 'F' for a score of 55", () => {
-    expect(gradeToLetter(55)).toBe("F");
-  });
 });

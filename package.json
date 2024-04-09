@@ -6,7 +6,8 @@
 
   "scripts": {
     "test": "rm -rf .stryker-tmp/* && jest",
-    "reset": "jest --clearCache"
+    "reset": "jest --clearCache",
+    "mutation": "stryker run --reporters html"
   },
   "start": "main.js",
   "keywords": [],
