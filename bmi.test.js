@@ -1,20 +1,25 @@
-const bmi = require("./bmi");
+const bmi = require('./bmi');
 
-test("This is for 140lbs, 5 foot and 6 inches",()=>{
-    expect(bmi(140,5,6)).toEqual(22.5900)
-    expect(bmi("140",5,6)).toEqual(-1)
-})
-/*
-.toBeUndefined()
+// Test cases for valid inputs
+describe('BMI Calculator', () => {
+  // Test case for valid inputs
+  test('Calculates BMI correctly for valid inputs', () => {
+    // Test with weight in pounds, height in feet and inches
+    expect(bmi(150, 5, 9)).toEqual(22.15); // Expected BMI: 22.15
+  });
 
-.toBeNull()
+  // Test cases for invalid inputs
+  test('Returns -1 for invalid input types', () => {
+    // Test with invalid input types (string instead of number)
+    expect(bmi('not a number', 5, 9)).toEqual(-1);
+    // Test with invalid input types (string instead of number)
+    expect(bmi(150, 'not a number', 9)).toEqual(-1);
+    // Test with invalid input types (string instead of number)
+    expect(bmi(150, 5, 'not a number')).toEqual(-1);
+  });
 
-.toBeTruthy()
-
-.toBeFalsy()
-.toBeGreaterThan()
-.toBeLessThan()
-.toBeCloseTo()
-
-
-*/
+  test('Returns -2 for infeasible decision point (negative weight in pounds)', () => {
+    // Test with negative weight in pounds
+    expect(bmi(-150, 5, 9)).toEqual(-2);
+  });
+});
