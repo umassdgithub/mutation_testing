@@ -4,5 +4,10 @@
   },
   "dependencies": {
     "jest": "^29.7.0"
-  }
+  },
+    "scripts": {
+    "test": "rm -rf .stryker-tmp/* && jest",
+    "reset": "jest --clearCache",
+    "mutation": "stryker run --reporters html"
+  },
 }
