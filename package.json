@@ -9,5 +9,5 @@
     "test": "rm -rf .stryker-tmp/* && jest",
     "reset": "jest --clearCache",
     "mutation": "stryker run --reporters html"
-  },
+  }
 }
